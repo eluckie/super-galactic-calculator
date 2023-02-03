@@ -6,5 +6,6 @@ export default class YearsPassed {
     this.earthYears = earthYearsPassed;
     this.mercuryYears = earthYearsPassed * (1 / .24);
     this.venusYears = earthYearsPassed * (1 / .62);
+    this.marsYears = earthYearsPassed / 1.88;
   }
 }
