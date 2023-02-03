@@ -8,8 +8,16 @@ describe("YearsPassed", () => {
     const currentAge = 30;
     const previousAge = 20;
     const yearDifference = (currentAge - previousAge);
-    const yearsPassed = new YearsPassed(yearDifference);
+    const yearsPassed = new YearsPassed(currentAge, previousAge);
     expect(yearsPassed.earthYears).toEqual(yearDifference);
   });
 
+  test("should correctly calculate years passed in Mercury years by using the years passed on Earth", () => {
+    const currentAge = 30;
+    const previousAge = 20;
+    const yearDifference = (currentAge - previousAge);
+    const yearsPassed = new YearsPassed(currentAge, previousAge);
+    expect(yearsPassed.earthYears).toEqual(yearDifference);
+    expect(yearsPassed.mercuryYears).toEqual(yearDifference * (1 / .24));
+  });
 });
