@@ -1,4 +1,4 @@
-import PlanetaryAges from "../js/planetary-ages.js";
+import PlanetaryAges from "./planetary-ages.js";
 
 export default class YearsPassed {
   constructor(currentAge, previousAge) {

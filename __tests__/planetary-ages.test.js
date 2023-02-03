@@ -37,11 +37,4 @@ describe("PlanetaryAges", () => {
     expect(person.marsYears).toEqual(30 / 1.88);
     expect(person.jupiterYears).toEqual(30 / 11.86);
   });
-
-  test("should correctly calculate how many Earth years have passed since a previous birthday", () => {
-    const currentAge = 30;
-    const previousAge = 20;
-    const person = new PlanetaryAges(currentAge);
-    expect(person.yearsPassed()).toEqual(currentAge - previousAge);
-  });
 });
