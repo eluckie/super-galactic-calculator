@@ -41,4 +41,5 @@ describe("YearsPassed", () => {
     expect(yearsPassed.venusYears).toEqual(yearDifference * (1 / .62));
     expect(yearsPassed.marsYears).toEqual(yearDifference / 1.88);
   });
+  
 });
