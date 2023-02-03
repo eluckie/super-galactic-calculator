@@ -6,12 +6,21 @@
 <body>
   <h2>Galactic Calculator</h2>
   <p>Enter your current age to see how old you'd be on other planets.</p>
-  <form>
-    <label for="currentAge">Current age:</label>
-    <input id="currentAge" type="number" name="currentAge">
-    <label for="otherAge">Other age:</label>
-    <input id="otherAge" type="number" name="otherAge">
+  <form id="age-form">
+    <label for="current-age">Current age:</label>
+    <input id="current-age" type="number" name="current-age">
+    <label for="other-age">Other age:</label>
+    <input id="other-age" type="number" name="other-age">
     <button type="submit" id="age-button">Show me my ages</button>
   </form>
+  <div id="ages-object" class="hidden">
+    <ul>
+      <li>Your age on Mercury is <span id="mercury-years"></span> years</li>
+      <li>Your age on Venus is <span id="venus-years"></span> years</li>
+      <li>Your age on Earth is <span id="earth-years"></span> years</li>
+      <li>Your age on Mars is <span id="mars-years"></span> years</li>
+      <li>Your age on Jupiter is <span id="jupiter-years"></span> years</li>
+    </ul>
+  </div>
 </body>
 </html>
