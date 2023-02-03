@@ -5,5 +5,6 @@ export default class YearsPassed {
     const earthYearsPassed = (currentAge - previousAge);
     this.earthYears = earthYearsPassed;
     this.mercuryYears = earthYearsPassed * (1 / .24);
+    this.venusYears = earthYearsPassed * (1 / .62);
   }
 }
