@@ -20,4 +20,14 @@ describe("YearsPassed", () => {
     expect(yearsPassed.earthYears).toEqual(yearDifference);
     expect(yearsPassed.mercuryYears).toEqual(yearDifference * (1 / .24));
   });
+
+  test("should correctly calculate years passed in Mercury and Venus years by using the years passed on Earth", () => {
+    const currentAge = 30;
+    const previousAge = 20;
+    const yearDifference = (currentAge - previousAge);
+    const yearsPassed = new YearsPassed(currentAge, previousAge);
+    expect(yearsPassed.earthYears).toEqual(yearDifference);
+    expect(yearsPassed.mercuryYears).toEqual(yearDifference * (1 / .24));
+    expect(yearsPassed.venusYears).toEqual(yearDifference * (1 / .62));
+  });
 });
