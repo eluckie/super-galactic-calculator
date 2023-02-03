@@ -28,4 +28,13 @@ describe("PlanetaryAges", () => {
     expect(person.venusAge).toEqual(30 * (1 / .62));
     expect(person.marsAge).toEqual(30 / 1.88);
   });
+
+  test("should correctly calculate user's age in Mercury, Venus, Mars, and Jupiter years by using their age on Earth", () => {
+    const person = new PlanetaryAges(30);
+    expect(person.earthAge).toEqual(30);
+    expect(person.mercuryAge).toEqual(30 * (1 / .24));
+    expect(person.venusAge).toEqual(30 * (1 / .62));
+    expect(person.marsAge).toEqual(30 / 1.88);
+    expect(person.jupiterYears).toEqual(30 / 11.86);
+  });
 });
