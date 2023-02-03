@@ -7,8 +7,13 @@ export default class PlanetaryAges {
     this.jupiterYears = earthAge / 11.86;
   }
 
-  // yearsPassed(currentAge, previousAge) {
-  //   const yearDifference = (currentAge - previousAge);
-  //   return yearDifference;
-  // }
+yearDifference(currentAge, otherAge) {
+    const earthYears = (currentAge - otherAge);
+    const yearsNeeded = new PlanetaryAges(earthYears);
+    return yearsNeeded;
+  };
+
+  yearsToCome(currentAge, otherAge) {
+
+  }
 }
