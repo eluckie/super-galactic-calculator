@@ -36,7 +36,7 @@ This webpage consists of a short form for users to fill out to see how Earth yea
 * Navigate to the top level of this directory in your computer's terminal
 * Run the command "$ npm install" in your terminal to install the necessary packages
 * Once the packages have finished installing, run the command "$ npm run start"
-* Webpack will bundle the project and open a LiveServer in your web browser so that you may see any changes made in real-time
+* Webpack will bundle the project and open a LiveServer in your web browser so that you may see any updates to the code that you make in real-time
 
 ## Known Bugs
 
