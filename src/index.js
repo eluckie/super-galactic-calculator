@@ -1,8 +1,6 @@
-// import "bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
+import YearsToCome from "./js/future-bday.js";
 import PlanetaryAges from "./js/planetary-ages.js";
-// import YearsToCome from "./future-bday.js";
 
 function getPlanetaryAges(event) {
   event.preventDefault();
@@ -53,19 +51,53 @@ function getYearsPassed() {
     error2.setAttribute("class", "hidden");
     const div = document.getElementById("ages-object");
     div.innerText = null;
-
-    const planetAges = new PlanetaryAges(currentAge, otherAge);
-    const allPlanetAges = Object.values(planetAges);
+    const planetYears = new PlanetaryAges(currentAge, otherAge);
+    const allPlanetYears = Object.values(planetYears);
     const mercuryP = document.createElement("p");
     const venusP = document.createElement("p");
     const earthH3 = document.createElement("h3");
     const marsP = document.createElement("p");
     const jupiterP = document.createElement("p");
-    mercuryP.append(allPlanetAges[1] + " Mercury years have passed.");
-    venusP.append(allPlanetAges[2] + " Venus years have passed.");
-    earthH3.append(allPlanetAges[0] + " Earth years have passed.");
-    marsP.append(allPlanetAges[3] + " Mars years have passed.");
-    jupiterP.append(allPlanetAges[4] + " Jupiter years have passed.");
+    mercuryP.append(allPlanetYears[1] + " Mercury years have passed.");
+    venusP.append(allPlanetYears[2] + " Venus years have passed.");
+    earthH3.append(allPlanetYears[0] + " Earth years have passed.");
+    marsP.append(allPlanetYears[3] + " Mars years have passed.");
+    jupiterP.append(allPlanetYears[4] + " Jupiter years have passed.");
+    div.append(earthH3);
+    div.append(mercuryP);
+    div.append(venusP);
+    div.append(marsP);
+    div.append(jupiterP);
+    div.removeAttribute("class");
+    document.getElementById("age-form").reset();
+  }
+}
+
+function getFutureYears() {
+  const error1 = document.getElementById("first-error-message");
+  const error2 = document.getElementById("second-error-message");
+  const currentAge = document.getElementById("current-age").value;
+  const otherAge = document.getElementById("other-age").value;
+  error1.setAttribute("class", "hidden");
+
+  if (!currentAge || !otherAge) {
+    error2.removeAttribute("class");
+  } else {
+    error2.setAttribute("class", "hidden");
+    const div = document.getElementById("ages-object");
+    div.innerText = null;
+    const planetYears = new YearsToCome(currentAge, otherAge);
+    const allPlanetYears = Object.values(planetYears);
+    const mercuryP = document.createElement("p");
+    const venusP = document.createElement("p");
+    const earthH3 = document.createElement("h3");
+    const marsP = document.createElement("p");
+    const jupiterP = document.createElement("p");
+    mercuryP.append(allPlanetYears[1] + " Mercury years have yet to pass.");
+    venusP.append(allPlanetYears[2] + " Venus years have yet to pass.");
+    earthH3.append(allPlanetYears[0] + " Earth years have yet to pass.");
+    marsP.append(allPlanetYears[3] + " Mars years have yet to pass.");
+    jupiterP.append(allPlanetYears[4] + " Jupiter years have yet to pass.");
     div.append(earthH3);
     div.append(mercuryP);
     div.append(venusP);
@@ -91,4 +123,5 @@ window.addEventListener("load", function() {
   document.getElementById("age-form").addEventListener("submit", getPlanetaryAges);
   document.getElementById("reset-button").addEventListener("click", resetScreen);
   document.getElementById("past-button").addEventListener("click", getYearsPassed);
+  document.getElementById("future-button").addEventListener("click", getFutureYears);
 });
