@@ -20,9 +20,9 @@
 
 ## Description
 
-This webpage consists of a short form for users to fill out to see how Earth years compare to the years on Mercury, Venus, Mars, and Jupiter. There is a space for users to enter both their current age an (optional) other age.
+This webpage consists of a short form for users to fill out to see how Earth years compare to the years on Mercury, Venus, Mars, and Jupiter. There is a space for users to enter both their current age and an (optional) other age.
 
-| If user clicks | They must enter | And they will be shown |
+| If using this button | They must enter | And they will be shown |
 | -------------- | --------------- | ---------------------- |
 | "show me my ages" | current age only | their current age on all 5 planets |
 | "calculate my past" | current AND other age | how many years have passed since the other age on all 5 planets |
