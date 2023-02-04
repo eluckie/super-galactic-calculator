@@ -17,9 +17,9 @@ describe("YearsToCome", () => {
     const yearDifference = (futureAge - currentAge);
     const yearsNeeded = new YearsToCome(currentAge, futureAge);
     expect(yearsNeeded.earthYears).toEqual(yearDifference);
-    expect(yearsNeeded.mercuryYears).toEqual(yearDifference * (1 / .24));
-    expect(yearsNeeded.venusYears).toEqual(yearDifference * (1 / .62));
-    expect(yearsNeeded.marsYears).toEqual(yearDifference / 1.88);
-    expect(yearsNeeded.jupiterYears).toEqual(yearDifference / 11.86);
+    expect(yearsNeeded.mercuryYears).toEqual((10 * (1 / .24)).toFixed(2));
+    expect(yearsNeeded.venusYears).toEqual((10 * (1 / .62)).toFixed(2));
+    expect(yearsNeeded.marsYears).toEqual((10 / 1.88).toFixed(2));
+    expect(yearsNeeded.jupiterYears).toEqual((10 / 11.86).toFixed(2));
   });
 });
