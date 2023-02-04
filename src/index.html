@@ -4,12 +4,12 @@
   <title>Super Galactic Calculator</title>
 </head>
 <body>
-  <h2>Galactic Calculator</h2>
-  <h4>Enter your current age & click 'show me my ages' to see how old you'd be on other planets.</h4>
-  <ul>
-    <li>To see how many years have passed (on each planet) since a previous birthday - just enter your current age along with your previous age in the "other age" & click 'calculate my past'.</li>
-    <li>To see how many years are left (on each planet) until a future birthday - just enter your current age along with your future age in the "other age" & click 'show me my future'.</li>
-  </ul>
+  <h1>Super Galactic Calculator</h1>
+    <p id="directions">Enter your current age & click 'show me my ages' to see how old you'd be on other planets.</p>
+    <ul>
+      <li>To see how many years have passed (on each planet) since a previous birthday - just enter your current age along with your previous age in the "other age" & click 'calculate my past'.</li>
+      <li>To see how many years are left (on each planet) until a future birthday - just enter your current age along with your future age in the "other age" & click 'show me my future'.</li>
+    </ul>
   <div id="first-error-message" class="hidden">
     <h4>Please enter your current age!</h4>
   </div>
@@ -17,14 +17,15 @@
     <h4>Please enter your current age & another age to compare!</h4>
   </div>
   <form id="age-form">
-    <label for="current-age">Current age:</label>
+    <label for="current-age" id="current-age-label">Current age:</label>
     <input id="current-age" type="number" name="current-age">
-    <label for="other-age">Other age:</label>
+    <label for="other-age" id="other-age-label">Other age:</label>
     <input id="other-age" type="number" name="other-age">
     <br>
     <button type="submit" id="age-button">Show me my ages</button>
     <button type="button" id="past-button">Calculate my past</button>
-    <button type="button" id="future-button">Show me my future</button><br>
+    <button type="button" id="future-button">Show me my future</button>
+    <br>
     <button type="button" id="reset-button">Start over</button>
   </form>
   <br>
