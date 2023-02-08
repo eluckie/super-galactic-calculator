@@ -1,6 +1,6 @@
 import "./css/styles.css";
-import YearsToCome from "./js/future-bday.js";
-import PlanetaryAges from "./js/planetary-ages.js";
+import YearsToCome from "./js/YearsToCome.js";
+import PlanetaryAges from "./js/PlanetaryAges.js";
 
 function getPlanetaryAges(event) {
   event.preventDefault();
